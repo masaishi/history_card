@@ -6,7 +6,7 @@ describe CardsController, :type => :controller do
 
     it "カードの数だけ返す" do
       card = Card.create(first_name: "信長")
-      p card
+      get :index
       expect(assigns[:cards].count).to eq 1
     end
   end
